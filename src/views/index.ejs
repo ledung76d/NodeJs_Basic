@@ -47,8 +47,16 @@
                             <td>
                                 <button type="button"><a href="/detail/user/<%=dataUser[i].id%>"
                                         target="_blank">Detail</a></button>
-                                <button type="button">Edit</button>
-                                <button type="button">Delete</button>
+
+                                <form action="/edit-user/<%=dataUser[i].id%>" method="GET">
+                                    <button type="submit">Edit</button>
+
+                                </form>
+
+                                <form action="/delete-user" method="POST">
+                                    <input type="text" hidden value="<%=dataUser[i].id%>" name="userId" />
+                                    <button type="submit">Delete</button>
+                                </form>
                             </td>
                         </tr>
                         <% } %>
@@ -58,6 +66,30 @@
                 </tbody>
 
             </table>
+        </div>
+        <div class="create-user-container">
+            <form action="/create-new-user" method="POST">
+                <div><b>Create a new user:</b></div>
+                <div>
+                    <label>FirstName:</label>
+                    <input type="text" name="firstName" />
+                </div>
+                <div>
+                    <label>LastName:</label>
+                    <input type="text" name="lastName" />
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email" />
+                </div>
+                <div>
+                    <label>Address:</label>
+                    <input type="text" name="address" />
+                </div>
+                <div>
+                    <button type="submit" class="btn-submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 
