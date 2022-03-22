@@ -38,8 +38,8 @@ let getEditPage = async (req, res) => {
 let postUpdateUser = async (req, res) => {
     console.log("check request: ", req.body)
     let { firstName, lastName, email, address, id } = req.body;
-    // await pool.execute(`UPDATE users set firstName = ?, lastName = ?, email = ?, address = ? where id = ?`, [firstName, lastName, email, address, id])
-    return res.send('Hello update user')
+    await pool.execute(`UPDATE users set firstName = ?, lastName = ?, email = ?, address = ? where id = ?`, [firstName, lastName, email, address, id])
+    return res.redirect('/');
 }
 
 module.exports = {
