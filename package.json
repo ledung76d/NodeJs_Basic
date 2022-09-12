@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haryphamdev/node-js-basic-hoidanit.git"
+    "url": "git+https://github.com/ledung76d/nodejs-basic.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/haryphamdev/node-js-basic-hoidanit/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/haryphamdev/node-js-basic-hoidanit#readme",
+  "homepage": "",
   "dependencies": {
     "@babel/core": "7.15.5",
     "@babel/node": "7.15.4",
